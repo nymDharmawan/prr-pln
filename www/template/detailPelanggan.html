@@ -1,0 +1,32 @@
+<ion-view view-title="Title">
+	<ion-header-bar align-title="left" class="bar-positive">
+	  <h1 class="title">Update Data Pelanggan</h1>
+	</ion-header-bar>
+  <ion-content>
+    <form>
+      <label class="item item-input">
+        <input type="hidden" placeholder="ID Pelanggan" ng-model="prr.idpelanggan">
+        <input type="hidden" placeholder="ID Pelanggan" ng-model="prr.lat">
+        <input type="hidden" placeholder="ID Pelanggan" ng-model="prr.lng">
+        <p>ID Pelanggan : {{prr.idpelanggan}}</p><br>
+      </label>
+      <label class="item item-input">
+        <p>Latitude : {{prr.lat}}</p>
+      </label>
+      <label class="item item-input">
+        <p>Longitude : {{prr.lng}}</p>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Tanggal Cek</span>
+        <input type="date" ng-model="prr.tanggalcek">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Keterangan</span>
+        <textarea ng-model="prr.keterangan"></textarea>
+      </label>
+      <div class="padding">
+        <input type="submit" class="button button-block button-assertive" value="Simpan" ng-click="submit(prr)">
+      </div>
+  	</form>
+  </ion-content>
+</ion-view>

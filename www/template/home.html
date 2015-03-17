@@ -1,0 +1,24 @@
+<ion-view view-title="Title">
+	<ion-header-bar align-title="left" class="bar-positive">
+	  <h1 class="title">Cari Data Pelanggan</h1>
+	</ion-header-bar>
+  <ion-content>
+    <form>
+      <label class="item item-input">
+        <input type="text" placeholder="ID Pelanggan" ng-model="prr.idpelanggan">
+      </label>
+      <div class="padding">
+        <input type="submit" class="button button-block button-assertive" value="Cari" ng-click="submit(prr)">
+      </div>
+  	</form>
+  	<div class="list card">
+      <div class="list padding" ng-repeat="a in pelanggan track by $index">
+        <a class="item item-avatar" href="#/tabs/detailPelanggan/{{a.id_pelanggan}}">
+          	<h2 class="merah">{{ a.nama }}</h2>
+          	<p>{{a.alamat}}</p>
+          	<p>Jumlah PRR : Rp. {{a.jumlah_prr}}</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
